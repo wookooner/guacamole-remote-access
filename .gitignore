@@ -1,0 +1,5 @@
+.env
+data/
+backups/
+nginx/ssl/
+init/initdb.sql

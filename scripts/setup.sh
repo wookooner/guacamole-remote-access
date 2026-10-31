@@ -13,7 +13,7 @@ fi
 set -a; source .env; set +a
 
 # 2) 데이터 디렉터리
-mkdir -p data/{postgres,drive,record} nginx/ssl init
+mkdir -p data/{drive,record} nginx/ssl init
 # guacd(uid 1000)가 녹화/드라이브에 쓸 수 있도록
 chmod 0777 data/drive data/record
 

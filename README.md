@@ -62,5 +62,5 @@ docker compose pull && docker compose up -d   # 업데이트
 |---|---|
 | 로그인 화면 진입 후 "연결 오류" | `docker compose logs guacd` 확인, 대상 서버 방화벽/포트 확인 |
 | RDP 즉시 끊김 | 보안 모드 `any`, *서버 인증서 무시* 체크, 대상 PC의 원격 데스크톱 허용 확인 |
-| 로그인 시 DB 오류 | `init/initdb.sql`이 비어있거나 늦게 생성됨 → `docker compose down && rm -rf data/postgres && docker compose up -d` (데이터 초기화 주의) |
+| 로그인 시 DB 오류 | `init/initdb.sql`이 비어있거나 늦게 생성됨 → `docker compose down -v && docker compose up -d` (데이터 초기화 주의) |
 | 화면이 멈춤 | nginx WebSocket 설정(`Upgrade` 헤더) 및 프록시 타임아웃 확인 |
